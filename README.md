@@ -24,7 +24,7 @@ Research displays new tools, spells, and upgrades available to the player.
 
 Orb can be clicked by the player to provide mana. Visually "fills" as the player gets closer to goal in Runs where that matters.
 
-Visuals holds visual representations of the tools being utilized by the player. Should get busier as more tools are added.
+Tools holds visual representations of the tools being utilized by the player. Should get busier as more tools are added.
 
 
 # Installation

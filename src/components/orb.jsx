@@ -5,10 +5,10 @@ import React from 'react';
 // TODO
 // Everything
 
-const Orb = () => {
+const Orb = ({ mana, onManaChange }) => {
   return (
     <div>
-      WIP
+      <button onClick={() => onManaChange(mana + 1)} />
     </div>
   )
 }

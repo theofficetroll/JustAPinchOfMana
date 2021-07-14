@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Build from '../components/build.jsx';
-import Visuals from '../components/visuals.jsx';
+import Tools from '../components/tools.jsx';
 import Research from '../components/research.jsx';
-import Orb from '../components/orb.jsx';
 import Progress from '../components/progress.jsx';
 
 // TODO
@@ -13,13 +12,14 @@ import Progress from '../components/progress.jsx';
 
 const Run = () => {
 
+  const [ mana, setMana ] = useState(0);
+
   return (
     <div>
       <Build />
-      <Visuals />
       <Research />
-      <Orb />
-      <Progress />
+      <Tools mana={mana} onManaChange={setMana} />
+      <Progress mana={mana} />
     </div>
   )
 }

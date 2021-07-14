@@ -5,10 +5,10 @@ import React from 'react';
 // TODO
 // Everything
 
-const Progress = () => {
+const Progress = ({ mana }) => {
   return (
     <div>
-      WIP
+      {mana} / 1,000,000
     </div>
   )
 }
