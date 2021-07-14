@@ -9,8 +9,8 @@ import React from 'react';
 
 const Orb = ({ mana, onManaChange, orbClickValue, orbCooldown}) => {
   return (
-    <div className='orb'>
-      <button onClick={() => onManaChange(mana + orbClickValue)} />
+    <div>
+      <button className='orb' onClick={() => onManaChange(mana + orbClickValue)} />
     </div>
   )
 }
