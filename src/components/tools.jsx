@@ -6,6 +6,13 @@ import Orb from '../components/orb.jsx';
 // TODO
 // Add additional tools as they're created.
 
+// Tools to create
+// Mirror: adds a percentage of orb click value when orb clicked
+// Spinner: produces mana every second
+// Clock: produces mana every 10 seconds
+// Pendulum: produces mana every 30 seconds
+// Echo Chamber: produces mana when orb clicked based on the number of times the player has clicked
+
 const Tools = ({ mana, onManaChange, orbCooldown, orbClickValue }) => {
   return (
     <div>

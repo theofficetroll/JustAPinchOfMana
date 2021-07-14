@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import './index.css';
 
 import Home from './pages/home.jsx';
 import Run from './pages/run.jsx'
