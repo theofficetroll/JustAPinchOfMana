@@ -13,12 +13,14 @@ import Progress from '../components/progress.jsx';
 const Run = () => {
 
   const [ mana, setMana ] = useState(0);
+  const [ orbClickValue, setOrbClickValue ] = useState(1);
+  const [ orbCooldown, setOrbCooldown ] = useState(5);
 
   return (
     <div>
       <Build />
-      <Research />
-      <Tools mana={mana} onManaChange={setMana} />
+      <Research mana={mana} setOrbClickValue={setOrbClickValue} setOrbCooldown={setOrbCooldown} />
+      <Tools mana={mana} onManaChange={setMana} orbClickValue={orbClickValue} orbCooldown={orbCooldown} />
       <Progress mana={mana} />
     </div>
   )
