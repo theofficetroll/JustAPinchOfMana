@@ -14,7 +14,7 @@ Run is where the game is actively played.
 
 # Run Components
 
-Main holds the primary Hooks, controls game state, etc.
+Run itself holds the primary Hooks, controls game state, etc.
 
 Progress shows the current mana held by the player and/ or other goals. Contains button to trigger end-run in some types of Run.
 
