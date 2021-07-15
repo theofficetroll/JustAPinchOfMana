@@ -5,28 +5,34 @@ import React, { useEffect, useState } from 'react';
 // TODO
 // Add visual indicator that orb not ready
 
+//  Fix cooldown on button, it disables but won't re-enable.
+
 const Orb = ({ mana, onManaChange, orbClickValue, orbCooldown}) => {
 
-  const [ orbInterval, setOrbInterval ] = useState(5000); // change value to orbCooldown
-  const [ orbReady, setOrbReady ] = useState(true);
+  const [ cooldown, setCooldown ] = useState(1000); // change value to orbCooldown
+  const [ ready, setReady ] = useState(true);
+  const [ timeLeft, setTimeLeft ] = useState(0);
 
 
-  useEffect(() => {
-    setInterval(() => {
-      setOrbReady(oldValue => {
-        if (oldValue = false) {
-          return true;
-        };
-      })
-    }, orbInterval);
-  }, []);
+  const setTimer = () => {
+    useEffect(() => {
+      setTimeout(() => {
+        setReady(oldValue => {
+          if (oldValue = false) {
+            return true;
+          };
+        })
+      }, cooldown);
+    }, []);
+  }
 
   const onClick = () => {
-    if(orbReady) {
+    if(ready) {
       onManaChange(mana + orbClickValue);
-      setOrbReady(false);
+      setReady(false);
+      setTimer();
     } else {
-      console.log('orb not ready');
+      console.log('orb not ready', timeLeft);
     }
   }
 
