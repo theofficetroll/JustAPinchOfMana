@@ -9,10 +9,12 @@ import React from 'react';
 // Add click to purchase
 // Visually indicate when Tool is purchaseable
 
-const ToolBuild = () => {
+// Build Helper function to find costs, production, etc by name
+
+const ToolBuild = ({ name, total }) => {
   return (
     <div>
-      WIP
+      {name} | {total} | {total}/sec | Cost | Purchasable?
     </div>
   )
 }

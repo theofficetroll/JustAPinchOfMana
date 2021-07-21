@@ -1,4 +1,5 @@
 import React from 'react';
+import ToolBuild from './toolBuild.jsx';
 
 // Build shows current tool data and allows player to purchase tools.
 
@@ -8,9 +9,14 @@ import React from 'react';
 // Create ToolBuild component
 
 const Build = () => {
+
+  // Test Values, will need to generate actual list
+  let toolName = "spinner"; // produces 1 mana per second
+  let toolTotal = 1;
+
   return (
     <div>
-      WIP
+      <ToolBuild name = {toolName} total = {toolTotal} />
     </div>
   )
 }
